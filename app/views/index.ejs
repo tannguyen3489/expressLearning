@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+<body>
+
+<% if ( userFullName ) { %>
+<h2>Hello <%= userFullName %> </h2>
+<a href="/signout">Sign out</a>
+<% } else { %>
+<a href="/signup">Signup</a>
+<a href="/signin">Signin</a>
+<% } %>
+
+<img src="images/avatar.jpg" alt="Logo">
+<h1><%= title %></h1>
+</body>
 </html>
