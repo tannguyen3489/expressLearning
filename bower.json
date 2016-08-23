@@ -1,0 +1,22 @@
+{
+  "name": "project1",
+  "description": "",
+  "main": "",
+  "authors": [
+    "kevin <tannguyen3489@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tannguyen3489/expressLearning",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.3.0",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}

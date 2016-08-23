@@ -22,4 +22,5 @@ module.exports = function() {
     //     done(null, user);
     // });
     require('./strategies/local.js')();
+    require('./strategies/google.js')();
 };

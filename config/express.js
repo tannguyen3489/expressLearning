@@ -48,15 +48,20 @@ module.exports = function () {
 
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
+    // app.set('view engine', 'jsx');
+    // app.engine('jsx', require('express-react-views').createEngine());
+
     app.use(express.static('./public'));
+    app.use("/bower_components", express.static('./bower_components'));
 
     app.use(passport.initialize());
     app.use(passport.session());
 
     // config authenticate
-    app.all("*", auth);
+    // app.all("*", auth);
 
     require('../app/routes/index.server.routes.js')(app);
-    require('../app/routes/users.server.routes.js')(app)
+    require('../app/routes/users.server.routes.js')(app);
+    require('../app/routes/reactjs.server.routes')(app);
     return app;
 };
